@@ -7,6 +7,8 @@ import ProjectPage from "./pages/ProjectPage";
 // Components
 import Nav from "./components/Nav/nav";
 
+import "./App.css";
+
 const HeaderLayout = () => (
   <div>
     <Nav />

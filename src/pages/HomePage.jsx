@@ -22,6 +22,9 @@ function HomePage() {
     
     
     return (
+       // <div>
+         //   <h1>Cro</h1>
+       // </div>
         <div id="project-list">
             {projectList.map((project, key) => {
                 return <ProjectCard key={key} projectData={project} />;

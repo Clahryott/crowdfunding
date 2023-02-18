@@ -7,7 +7,7 @@ import { useParams } from "react-router-dom";
 
 
 function ProjectPage() {
-    //state
+    //state   ***check project ??? ***
     const [project, setProjectData] = useState({ pledges: []});
 
     //hooks
