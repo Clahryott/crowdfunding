@@ -1,4 +1,4 @@
-xport const allProjects = [
+export const allProjects = [
     {
       id: 1,
       title: "Project One",
