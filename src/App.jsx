@@ -6,14 +6,14 @@ import LoginPage from "./pages/LoginPage";
 import ProjectPage from "./pages/ProjectPage";
 
 // Components
-import Nav from "./components/Nav/Nav";
+
 
 // CSS
 import "./App.css";
 
 const HeaderLayout = () => (
   <div>
-    <Nav />
+    {/* <Nav /> */}
     <Outlet />
   </div>
 );
