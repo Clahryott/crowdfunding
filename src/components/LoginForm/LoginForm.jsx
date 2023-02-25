@@ -41,7 +41,7 @@ function LoginForm() {
     event.preventDefault();
     if (credentials.username && credentials.password) {
       const { token } = await postData();
-      if (token ! ==undefined) {}
+      if (token !==undefined) {}
       window.localStorage.setItem("token", token);
       navigate("/");
 

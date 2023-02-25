@@ -20,7 +20,7 @@ const [loggedIn, setLoggedIn] = useState(window.localStorage.getItem("token") !=
     <>
       <Nav loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
       <Outlet context={[loggedIn, setLoggedIn]} />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

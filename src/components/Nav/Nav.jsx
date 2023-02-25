@@ -1,15 +1,15 @@
 import { Link } from "react-router-dom";
-import './Nav.css'
+// import './Nav.css' add later
 
-function Nav() {
-    return (
-        <nav>
-            <Link to="/"> Home </Link>
-            <Link to="/project">Project</Link>
-            <Link to="/about">About</Link>
-        </nav>
-    );
-}
+// function Nav() {
+//     return (
+//         <nav>
+//             <Link to="/"> Home </Link>
+//             <Link to="/project">Project</Link>
+//             <Link to="/about">About</Link>
+//         </nav>
+//     );
+// }
 
 function Nav(props) {
     const { loggedIn, setLoggedIn } = props
@@ -26,6 +26,8 @@ function Nav(props) {
                 {!loggedIn && <Link to="/login" className="btn">Login In</Link>}
                 <div id="nav-controls">
                     <Link to="/" >Home</Link>
+                    <Link to="/project">Project</Link>
+//                  <Link to="/about">About</Link>
                 </div>
             </div>
             {loggedIn && <button onClick={handleClick}>Sign Out</button>}
