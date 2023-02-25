@@ -1,7 +1,9 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useOutletContext } from "react-router-dom";
 
 function LoginForm() {
+  const [, setLoggedIn] = useOutletContext();
+
   // State
   const [credentials, setCredentials] = useState({
     username: "",
@@ -39,34 +41,51 @@ function LoginForm() {
     event.preventDefault();
     if (credentials.username && credentials.password) {
       const { token } = await postData();
+      if (token ! ==undefined) {}
       window.localStorage.setItem("token", token);
       navigate("/");
-    }
-  };
 
-  return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="username">Username:</label>
-        <input
-          type="text"
-          id="username"
-          onChange={handleChange}
-          placeholder="Enter username"
-        />
-      </div>
-      <div>
-        <label htmlFor="password">Password:</label>
-        <input
-          type="password"
-          id="password"
-          onChange={handleChange}
-          placeholder="Password"
-        />
-      </div>
-      <button type="submit">Login</button>
-    </form>
-  );
-}
+      setLoggedIn(true);
+
+      navigate("/");
+        } else {
+          setLoggedIn(false);
+        }
+    }
+};
+
+//   return (
+//     <form onSubmit={handleSubmit}>
+//       <div>
+//         <label htmlFor="username">Username:</label>
+//         <input
+//           type="text"
+//           id="username"
+//           onChange={handleChange}
+//           placeholder="Enter username"
+//         />
+//       </div>
+//       <div>
+//         <label htmlFor="password">Password:</label>
+//         <input
+//           type="password"
+//           id="password"
+//           onChange={handleChange}
+//           placeholder="Enter username"
+//         />
+//       </div>
+//       <div>
+//         <label htmlFor="password">Password:</label>
+//         <input
+//           type="password"
+//           id="password"
+//           onChange={handleChange}
+//           placeholder="Password"
+//           />
+//       </div>
+//       <button type="submit">Login</button>
+//     </form>
+//   );
+// }
 
 export default LoginForm;
