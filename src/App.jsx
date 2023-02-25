@@ -6,7 +6,7 @@ import LoginPage from "./pages/LoginPage";
 import ProjectPage from "./pages/ProjectPage";
 
 // Components
-// import Nav from "./components/Nav/Nav";
+import Nav from "./components/Nav/Nav";
 
 // CSS
 import "./App.css";
