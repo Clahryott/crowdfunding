@@ -7,7 +7,7 @@ import ProjectPage from "./pages/ProjectPage";
 
 // Components
 import Nav from "./components/Nav/Nav";
-import Footer from "./components/Footer/Footer";
+// import Footer from "./components/Footer/Footer";
 
 // CSS
 import "./App.css";
