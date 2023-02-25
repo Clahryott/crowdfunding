@@ -23,11 +23,13 @@ function Nav(props) {
                 <img src="src/images/Communitarian.png" alt="communitarian-logo" />
             </div>
             <div id="nav-right">
-                {!loggedIn && <Link to="/login" className="btn">Login In</Link>}
+                {!loggedIn && <Link to="/login" className="btn">Login</Link>}
                 <div id="nav-controls">
-                    <Link to="/" >Home</Link>
-                    <Link to="/project">Project</Link>
-//                  <Link to="/about">About</Link>
+                    <Link to="/"> Home </Link>
+
+                    <Link to="/project"> Project </Link>
+
+                    <Link to="/about"> About </Link>
                 </div>
             </div>
             {loggedIn && <button onClick={handleClick}>Sign Out</button>}
