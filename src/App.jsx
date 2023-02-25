@@ -2,11 +2,13 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 
 // Pages
 import HomePage from "./pages/HomePage";
+import LoginPage from "./pages/LoginPage";
 import ProjectPage from "./pages/ProjectPage";
 
 // Components
-import Nav from "./components/Nav/nav";
+import Nav from "./components/Nav/Nav";
 
+// CSS
 import "./App.css";
 
 const HeaderLayout = () => (
@@ -21,6 +23,7 @@ const router = createBrowserRouter([
     element: <HeaderLayout />,
     children: [
       { path: "/", element: <HomePage /> },
+      { path: "/login", element: <LoginPage /> },
       { path: "/project/:id", element: <ProjectPage /> },
     ],
   },
