@@ -41,18 +41,23 @@ function LoginForm() {
     event.preventDefault();
     if (credentials.username && credentials.password) {
       const { token } = await postData();
-      if (token !==undefined) {}
       window.localStorage.setItem("token", token);
-      navigate("/");
-
       setLoggedIn(true);
-
       navigate("/");
-        } else {
-          setLoggedIn(false);
-        }
     }
-};
+  };
+//       if (token !==undefined) {}
+//       window.localStorage.setItem("token", token);
+//       navigate("/");
+
+//       setLoggedIn(true);
+
+//       navigate("/");
+//         } else {
+//           setLoggedIn(false);
+//         }
+//     }
+// }
 
   return (
     <form onSubmit={handleSubmit}>
@@ -74,18 +79,10 @@ function LoginForm() {
           placeholder="Enter username"
         />
       </div>
-      <div>
-        <label htmlFor="password">Password:</label>
-        <input
-          type="password"
-          id="password"
-          onChange={handleChange}
-          placeholder="Password"
-          />
-      </div>
       <button type="submit">Login</button>
     </form>
   );
+}
 
 
 export default LoginForm;
