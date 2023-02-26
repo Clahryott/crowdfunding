@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-// import './Nav.css' add later
+import { useEffect } from "react";
+import './Nav.css'
 
 // function Nav() {
 //     return (
@@ -19,20 +20,18 @@ function Nav(props) {
     }
     return (
         <nav>
-            <div id="logo">
-                <img src="src/images/Communitarian.png" alt="communitarian-logo" />
-            </div>
-            <div id="nav-right">
+            <div>
                 {!loggedIn && <Link to="/login" className="btn">Login</Link>}
+                {!loggedIn && <Link to="/register" className="btn">Register</Link>}
+                {loggedIn && <button onClick={handleClick}>Log Out</button>}
+
                 <div id="nav-controls">
                     <Link to="/"> Home </Link>
-
                     <Link to="/project"> Project </Link>
-
                     <Link to="/about"> About </Link>
                 </div>
             </div>
-            {loggedIn && <button onClick={handleClick}>Sign Out</button>}
+
         </nav>
     );
 }

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 
-function UserPage = () {
+function UserPage() {
     // State
     const [user, setUser] = useState({});
     // const [loggedIn] = useRouterContext()
