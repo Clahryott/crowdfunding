@@ -4,6 +4,10 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import ProjectPage from "./pages/ProjectPage";
+import CreateProjectPage from "./pages/CreateProjectPage";
+import PledgePage from "./pages/PledgePage";
+import UserPage from "./pages/UserPage";
+
 
 // Components
 import Nav from "./components/Nav/Nav";
@@ -20,17 +24,24 @@ const [loggedIn, setLoggedIn] = useState(window.localStorage.getItem("token") !=
     <>
       <Nav loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
       <Outlet context={[loggedIn, setLoggedIn]} />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
+
 const router = createBrowserRouter([
   {
     element: <Layout />,
     children: [
       { path: "/", element: <HomePage /> },
-      { path: "/login", element: <LoginPage /> },
       { path: "/project/:id", element: <ProjectPage /> },
+      { path: "/about", element: <AboutPage /> },
+      { path: "/contact", element: <ContactPage /> },
+      { path: "/login", element: <LoginPage /> },
+      { path: "/pledges", element: <PledgePage /> },
+      { path: "/register", element: <RegistrationPage /> },
+      { path: "/create-project", element: <CreateProjectPage /> },
+      { path: "/user/:id", element: <UserPage /> },  
     ],
   },
 ]);
@@ -39,27 +50,3 @@ function App() {
   return <RouterProvider router={router} />;
 }
 export default App;
-
-// const HeaderLayout = () => (
-//   <div>
-//     { <Nav /> }
-//     <Outlet />
-//   </div>
-// );
-
-// const router = createBrowserRouter([
-//   {
-//     element: <HeaderLayout />,
-//     children: [
-//       { path: "/", element: <HomePage /> },
-//       { path: "/login", element: <LoginPage /> },
-//       { path: "/project/:id", element: <ProjectPage /> },
-//     ],
-//   },
-// ]);
-
-// function App() {
-//   return <RouterProvider router={router} />;
-// }
-
-// export default App;
