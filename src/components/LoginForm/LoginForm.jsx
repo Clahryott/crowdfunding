@@ -86,6 +86,6 @@ function LoginForm() {
       <button type="submit">Login</button>
     </form>
   );
-}
+
 
 export default LoginForm;
