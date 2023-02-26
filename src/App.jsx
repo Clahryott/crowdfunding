@@ -4,7 +4,7 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import ProjectPage from "./pages/ProjectPage";
-import CreateProjectPage from "./pages/CreateProjectPage";
+// import CreateProjectPage from "./pages/CreateProjectPage";
 import PledgePage from "./pages/PledgePage";
 import UserPage from "./pages/UserPage";
 
