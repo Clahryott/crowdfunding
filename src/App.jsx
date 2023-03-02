@@ -7,6 +7,7 @@ import ProjectPage from "./pages/ProjectPage";
 import CreateProjectPage from "./pages/CreateProjectPage";
 import PledgePage from "./pages/PledgePage";
 import UserPage from "./pages/UserPage";
+import ProjectForm from "./components/ProjectForm/ProjectForm";
 
 
 // Components
