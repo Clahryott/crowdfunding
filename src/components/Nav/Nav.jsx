@@ -28,6 +28,7 @@ function Nav(props) {
                 <div id="nav-controls">
                     <Link to="/"> Home </Link>
                     <Link to="/project"> Project </Link>
+                    <Link to="/create-project">Create Project</Link>
                     <Link to="/about"> About </Link>
                 </div>
             </div>
