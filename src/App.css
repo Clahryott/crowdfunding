@@ -53,7 +53,6 @@ strong {
   border-radius: 10px;
   }
 
-
 /* --------------- TABLES ---------------  */
 
 table {
@@ -90,7 +89,6 @@ td {
   transition: background-color 0.3s ease;
   width: 90px; /* set the width to be the same for all buttons */
 }
-
 
 .button:hover, button:hover, .button-link:hover, .button:hover {
   background-color:#385B4F;
@@ -152,6 +150,7 @@ form button {
 }
 
 /* --------------- AVATARS ---------------  */
+
 .avatar-container img {
   object-fit: cover;
   width: 100px;
