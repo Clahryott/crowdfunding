@@ -1,11 +1,14 @@
-import React, { useState } from "react";
-import { useNavigate, useOutletContext, useParams } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
 
 
 function PledgeForm(props) {
     const { project } = props;
-    const authToken = window.localStorage.getItem("token")
-    const [loggedIn] = useOutletContext();
+    // const authToken = window.localStorage.getItem("token")
+    // const [loggedIn] = useOutletContext();
+    const { loggedIn, token: authToken } = useContext(AuthContext)
+
     
     const [pledges, setPledges] = useState({
         // from JSON Raw Body in Deployed (default values)
@@ -26,9 +29,9 @@ function PledgeForm(props) {
     const handleChange = (event) => {
         const { id, value } = event.target;
         setPledges((prevPledges) => ({
-        ...prevPledges,
-        [id]: value,
-        project: project.title, 
+            ...prevPledges,
+            [id]: value,
+            project: project.id, 
         }));
     };
 

@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate, useParams, useOutletContext } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
 
 function CommentForm(props) {
-    const authToken = window.localStorage.getItem("token")
+    // const authToken = window.localStorage.getItem("token")
     const { project } = props;
-    const [loggedIn] = useOutletContext();
+    const { loggedIn, token: authToken } = useContext(AuthContext)
+    // const [loggedIn] = useOutletContext();
 
     const [comments, setComments] = useState({
         "body": "",

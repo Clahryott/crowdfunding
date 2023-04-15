@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 // Components
 import ProjectCard from "../components/ProjectCard/ProjectCard";
 
-function HomePage() {
+function ProjectListPage() {
   // State
   const [projectList, setProjectList] = useState([]);
 
@@ -13,8 +13,7 @@ function HomePage() {
         return results.json();
       })
       .then((data) => {
-        data.sort((a, b) => new Date(b.date_created).valueOf() - new Date(a.date_created).valueOf())
-        setProjectList(data.slice(0, 3));
+        setProjectList(data);
       });
   }, []);
 
@@ -27,4 +26,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default ProjectListPage;

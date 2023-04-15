@@ -31,7 +31,7 @@ function PledgePage() {
 
     return (
         <div>
-            <h2>Communitree Support Totals</h2>
+            <h2>Playfunding Support Totals</h2>
             <p>Total Pledges: {pledgesTotal} | Total Funds Raised: ${pledgesTotalFunds} </p> 
 
             <h3>All Pledges</h3>

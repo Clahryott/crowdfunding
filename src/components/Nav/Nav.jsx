@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
+import { useContext } from "react";
 import './Nav.css'
+import { AuthContext } from "../../providers/AuthProvider";
 
 // function Nav() {
 //     return (
@@ -13,10 +14,12 @@ import './Nav.css'
 // }
 
 function Nav(props) {
-    const { loggedIn, setLoggedIn } = props
+    // const { loggedIn, setLoggedIn } = props
+    const { loggedIn, setToken } = useContext(AuthContext)
+
     const handleClick = () => {
         window.localStorage.removeItem("token")
-        setLoggedIn(false)
+        setToken(null)
     }
     return (
         <nav>
@@ -27,7 +30,7 @@ function Nav(props) {
 
                 <div id="nav-controls">
                     <Link to="/"> Home </Link>
-                    <Link to="/project"> Project </Link>
+                    <Link to="/projects"> Project </Link>
                     <Link to="/create-project">Create Project</Link>
                     <Link to="/about"> About </Link>
                 </div>
